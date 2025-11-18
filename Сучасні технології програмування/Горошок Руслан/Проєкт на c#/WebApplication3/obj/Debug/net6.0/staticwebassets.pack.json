@@ -1,0 +1,293 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс.rar",
+      "PackagePath": "staticwebassets\\Images\\3 курс.rar"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation.v11.suo",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation.v11.suo"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\App.config",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\App.config"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Form1.Designer.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Form1.Designer.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Form1.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Form1.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Form1.resx",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Form1.resx"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Program.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Program.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\AssemblyInfo.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\AssemblyInfo.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\Resources.Designer.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\Resources.Designer.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\Resources.resx",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\Resources.resx"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\Settings.Designer.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\Settings.Designer.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\Settings.settings",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Properties\\Settings.settings"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Task2.Designer.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Task2.Designer.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Task2.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Task2.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\Task2.resx",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\Task2.resx"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.exe",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.exe"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.exe.config",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.exe.config"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.pdb",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.pdb"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.vshost.exe",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.vshost.exe"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.vshost.exe.config",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.vshost.exe.config"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.vshost.exe.manifest",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\BestApproximation.vshost.exe.manifest"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\mscorlib.dll",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\mscorlib.dll"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normidna.nlp",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normidna.nlp"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normnfc.nlp",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normnfc.nlp"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normnfd.nlp",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normnfd.nlp"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normnfkc.nlp",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normnfkc.nlp"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normnfkd.nlp",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\normnfkd.nlp"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\ru\\mscorlib.resources.dll",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\bin\\Debug\\ru\\mscorlib.resources.dll"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.Form1.resources",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.Form1.resources"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.Properties.Resources.resources",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.Properties.Resources.resources"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.Task2.resources",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.Task2.resources"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csproj.AssemblyReference.cache",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csproj.AssemblyReference.cache"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csproj.CoreCompileInputs.cache",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csproj.CoreCompileInputs.cache"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csproj.FileListAbsolute.txt",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csproj.FileListAbsolute.txt"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csproj.GenerateResource.cache",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csproj.GenerateResource.cache"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csprojAssemblyReference.cache",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csprojAssemblyReference.cache"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csprojResolveAssemblyReference.cache",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.csprojResolveAssemblyReference.cache"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.exe",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.exe"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.pdb",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\BestApproximation.pdb"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\DesignTimeResolveAssemblyReferences.cache",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\DesignTimeResolveAssemblyReferences.cache"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\DesignTimeResolveAssemblyReferencesInput.cache",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\DesignTimeResolveAssemblyReferencesInput.cache"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\TempPE\\Properties.Resources.Designer.cs.dll",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\TempPE\\Properties.Resources.Designer.cs.dll"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Debug\\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Release\\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs",
+      "PackagePath": "staticwebassets\\Images\\3 курс\\BestApproximation\\BestApproximation\\obj\\Release\\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\Task3a.docx",
+      "PackagePath": "staticwebassets\\Images\\Task3a.docx"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\calculator.jpg",
+      "PackagePath": "staticwebassets\\Images\\calculator.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\coming_soon.jpg",
+      "PackagePath": "staticwebassets\\Images\\coming_soon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\icon.png",
+      "PackagePath": "staticwebassets\\Images\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\login_back_img.jpg",
+      "PackagePath": "staticwebassets\\Images\\login_back_img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\login_front_img.jpg",
+      "PackagePath": "staticwebassets\\Images\\login_front_img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Images\\tic tac toe.png",
+      "PackagePath": "staticwebassets\\Images\\tic tac toe.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Tutorial.css",
+      "PackagePath": "staticwebassets\\Tutorial.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\Tutorial.html",
+      "PackagePath": "staticwebassets\\Tutorial.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\bg.jpeg",
+      "PackagePath": "staticwebassets\\bg.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\close.svg",
+      "PackagePath": "staticwebassets\\close.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\gameStore.css",
+      "PackagePath": "staticwebassets\\gameStore.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\gameStore.html",
+      "PackagePath": "staticwebassets\\gameStore.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\home.css",
+      "PackagePath": "staticwebassets\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\home.html",
+      "PackagePath": "staticwebassets\\home.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\login.css",
+      "PackagePath": "staticwebassets\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\menu.svg",
+      "PackagePath": "staticwebassets\\menu.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\script.js",
+      "PackagePath": "staticwebassets\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\tic_tac_toe.css",
+      "PackagePath": "staticwebassets\\tic_tac_toe.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\WebApplication3\\WebApplication3\\wwwroot\\tic_tac_toe.html",
+      "PackagePath": "staticwebassets\\tic_tac_toe.html"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.WebApplication3.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.WebApplication3.props",
+      "PackagePath": "build\\WebApplication3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApplication3.props",
+      "PackagePath": "buildMultiTargeting\\WebApplication3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.WebApplication3.props",
+      "PackagePath": "buildTransitive\\WebApplication3.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
