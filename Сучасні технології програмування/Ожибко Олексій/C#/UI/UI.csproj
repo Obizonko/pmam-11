@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons\MenuIcon.png" />
+    <Resource Include="icons\MenuIcon.png" />
+    <None Remove="icons\back.png" />
+    <Resource Include="icons\back.png" />
+    <None Remove="icons\filter.png" />
+    <Resource Include="icons\filter.png" />
+    <None Remove="icons\glass.png" />
+    <Resource Include="icons\glass.png" />
+    <None Remove="icons\OpenSubj.png" />
+    <Resource Include="icons\OpenSubj.png" />
+    <None Remove="icons\plus.png" />
+    <Resource Include="icons\plus.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj" />
+    <ProjectReference Include="..\DB_Connection\DB_Connection.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiveCharts" Version="0.9.7" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="LiveCharts.Wpf.NetCore3" Version="0.9.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.13" />
+  </ItemGroup>
+
+
+</Project>

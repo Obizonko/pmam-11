@@ -1,0 +1,54 @@
+﻿<Window x:Class="UI.StMainpagecopy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StMainpagecopy" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBlock Name="DateTextBlock" FontWeight="Bold" Margin="15"/>
+            <Image Source="icons/back.png" Width="30" Height="30" Margin="15" MouseUp="OnPreviousDayClick"/>
+            <Image Source="icons/back.png" Width="30" Height="30" MouseUp="OnNextDayClick" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="180"/>
+                </Image.RenderTransform>
+            </Image>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+        </Grid>
+
+        <ListView Grid.Row="2" Name="SubjectsListView" SelectionChanged="SubjectsListView_SelectionChanged" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Предмет" Width="150" DisplayMemberBinding="{Binding SubjectName}" />
+                    <GridViewColumn Header="Час" Width="80" DisplayMemberBinding="{Binding FormattedTime}" />
+                    <GridViewColumn Header="Присутність" Width="100" DisplayMemberBinding="{Binding Status}" />
+                    <GridViewColumn Header="Оцінка" Width="70" DisplayMemberBinding="{Binding Grade}" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Вийти" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Вид">
+                <MenuItem Header="Повноекранний режим" Click="Fullscreen_Click"/>
+            </MenuItem>
+            <MenuItem Header="Допомога">
+                <MenuItem Header="Технічна підтримка" Click="TechSupport_Click"/>
+            </MenuItem>
+            <MenuItem Header="Закрити" Click="Close_Click"/>
+        </Menu>
+    </Grid>
+</Window>

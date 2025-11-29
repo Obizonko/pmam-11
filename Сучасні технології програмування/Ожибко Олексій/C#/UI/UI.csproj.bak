@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Page Include="..\..\..\Desktop\WPF_edu_journal\WPF_edu_journal\App.xaml">
+        <Link>App.xaml</Link>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="..\..\..\Desktop\WPF_edu_journal\WPF_edu_journal\App.xaml.cs">
+        <Link>App.xaml.cs</Link>
+      </Compile>
+    </ItemGroup>
+
+</Project>

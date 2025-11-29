@@ -1,0 +1,65 @@
+﻿<Window x:Class="UI.Samplestatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:UI"
+        xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="Samplestatistics" Height="600" Width="850">
+    <Grid>
+        <TextBlock x:Name="teachersCountTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 30" Text="Кількість вчителів:" />
+        <Button Content="Вчителі" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,50,0,0" Click="EditTeachers_Click"/>
+
+        <TextBlock x:Name="studentsCountTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Text="Кількість учнів:"/>
+        <Button Content="Учні" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,111,0,0" Click="EditStudents_Click"/>
+
+        <Button Content="Розклад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,172,0,0" Click="ViewSchedule_Click"/>
+
+        <Button Content="Загальна статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,233,0,0" Click="GeneralStatistics_Click"/>
+
+        <Button Content="Вибіркова статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,294,0,0" Click="SelectiveStatistics_Click"/>
+
+        <Button Content="Порівняльна статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,355,0,0" Click="ComparativeStatistics_Click"/>
+
+
+        <Line X1="220" Y1="0" X2="220" Y2="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" Stroke="Black" StrokeThickness="2" />
+        <Line X1="400" Y1="0" X2="400" Y2="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" Stroke="Black" StrokeThickness="2" />
+        
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Вийти" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Вид">
+                <MenuItem Header="Повноекранний режим" Click="Fullscreen_Click"/>
+            </MenuItem>
+            <MenuItem Header="Допомога">
+                <MenuItem Header="Технічна підтримка" Click="TechSupport_Click"/>
+            </MenuItem>
+            <MenuItem Header="Закрити" Click="Close_Click"/>
+        </Menu>
+       
+        <TextBlock x:Name="сlasschoose" Text="Оберіть клас:" Margin="236,13,477.333,387.667" />
+        <TextBlock x:Name="studchoose" Text="Оберіть учня:" Margin="236,67,477.333,334.667" />
+        <ComboBox Name="comboBox" Width="95" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="236,32,0,0" SelectionChanged="comboBox_SelectionChanged">
+        </ComboBox>
+        <ComboBox Name="comboBox2" Width="95" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="236,92,0,0" SelectionChanged="comboBox2_SelectionChanged">
+        </ComboBox>
+
+        <TextBlock x:Name="sometext" Text="(не обов'язково)" Margin="236,119,462.333,285.667" />
+        <!-- Відображення інформації -->
+       
+        <TextBlock Name="classInfoTextBlock" Margin="230,150,450,200" />
+        <TextBlock Name="studentInfoTextBlock" Margin="230,290,450,0" />
+
+
+        <wpf:PieChart Name="classGradesPieChart" Width="250" Height="250" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="450,10,0,0">
+        </wpf:PieChart>
+
+        <wpf:PieChart Name="studentGradesPieChart" Width="250" Height="250" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="450,250,0,40">
+        </wpf:PieChart>
+
+       
+
+    </Grid>
+</Window>

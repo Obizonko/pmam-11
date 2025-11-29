@@ -1,0 +1,73 @@
+﻿<Window x:Class="UI.Сomparativestatistic"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:UI"
+        xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="Сomparativestatistic" Height="650" Width="900">
+    <Grid>
+        <TextBlock x:Name="teachersCountTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 30" Text="Кількість вчителів:" />
+        <Button Content="Вчителі" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,50,0,0" Click="EditTeachers_Click"/>
+
+        <TextBlock x:Name="studentsCountTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Text="Кількість учнів:"/>
+        <Button Content="Учні" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,111,0,0" Click="EditStudents_Click"/>
+
+        <Button Content="Розклад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,172,0,0" Click="ViewSchedule_Click"/>
+
+        <Button Content="Загальна статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,233,0,0" Click="GeneralStatistics_Click"/>
+
+        <Button Content="Вибіркова статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,294,0,0" Click="SelectiveStatistics_Click"/>
+
+        <Button Content="Порівняльна статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,355,0,0" Click="ComparativeStatistics_Click"/>
+
+
+        <Line X1="220" Y1="0" X2="220" Y2="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" Stroke="Black" StrokeThickness="2" />
+
+        
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Вийти" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Вид">
+                <MenuItem Header="Повноекранний режим" Click="Fullscreen_Click"/>
+            </MenuItem>
+            <MenuItem Header="Допомога">
+                <MenuItem Header="Технічна підтримка" Click="TechSupport_Click"/>
+            </MenuItem>
+            <MenuItem Header="Закрити" Click="Close_Click"/>
+        </Menu>
+        <Line X1="400" Y1="0" X2="400" Y2="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" Stroke="Black" StrokeThickness="2" />
+        <Line X1="-200" Y1="0" X2="-200" Y2="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" Stroke="Black" StrokeThickness="2" HorizontalAlignment="Right"/>
+       
+
+        <TextBlock x:Name="сlasschoose" Text="Оберіть клас:" Margin="236,13,477.333,387.667" />
+        <TextBlock x:Name="studchoose" Text="Оберіть учня:" Margin="236,67,477.333,334.667" />
+        <ComboBox Name="comboBox" Width="95" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="236,32,0,0" SelectionChanged="comboBox_SelectionChanged">
+        </ComboBox>
+        <ComboBox Name="comboBox2" Width="95" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="236,92,0,0" SelectionChanged="comboBox2_SelectionChanged">
+        </ComboBox>
+
+        <TextBlock x:Name="sometext" Text="(не обов'язково)" Margin="236,119,550.333,450"  />
+        <TextBlock x:Name="сlasschoose2" Text="Оберіть клас:"  HorizontalAlignment="Right" Margin="0,13,104.333,387.667" />
+        <TextBlock x:Name="studchoose2" Text="Оберіть учня:" HorizontalAlignment="Right" Margin="0,67,104.333,337.667"  />
+        <ComboBox Name="comboBox3" Width="95" VerticalAlignment="Top" HorizontalAlignment="Right" SelectionChanged="comboBox3_SelectionChanged" Margin=" 0,32,87,0">
+        </ComboBox>
+        <ComboBox Name="comboBox4" Width="95" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,92,87,0" SelectionChanged="comboBox4_SelectionChanged">
+        </ComboBox>
+
+        <TextBlock x:Name="sometext2" Text="(не обов'язково)" HorizontalAlignment="Right" Margin="0,122,88,450" />
+
+        <TextBlock Name="classInfoTextBlock" Margin="230,150,450,200" />
+        <TextBlock Name="studentInfoTextBlock" Margin="230,290,450,0" />
+        <TextBlock Name="classInfoTextBlock2" HorizontalAlignment="Right" Margin="0,152,28,200" />
+        <TextBlock Name="studentInfoTextBlock2" HorizontalAlignment="Right" Margin="0,273,28,0" />
+        <wpf:CartesianChart x:Name="chart1" Margin="400,160,200,0">
+        </wpf:CartesianChart>
+        
+        
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,94 @@
+﻿<Window x:Class="UI.Students"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="Students" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer x:Name="ScrollViewerGoods">
+            <StackPanel x:Name="PanelGoods" Margin="0,56,0,10"/>
+        </ScrollViewer>
+        <TextBlock x:Name="teachersCountTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 30" Text="Кількість вчителів:" />
+        <Button Content="Вчителі" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,50,0,0" Click="EditTeachers_Click"/>
+
+        <TextBlock x:Name="studentsCountTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Text="Кількість учнів:"/>
+        <Button Content="Учні" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,111,0,0" Click="EditStudents_Click"/>
+
+        <Button Content="Розклад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,172,0,0" Click="ViewSchedule_Click"/>
+
+        <Button Content="Загальна статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,233,0,0" Click="GeneralStatistics_Click"/>
+
+        <Button Content="Вибіркова статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,294,0,0" Click="SelectiveStatistics_Click"/>
+
+        <Button Content="Порівняльна статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,355,0,0" Click="ComparativeStatistics_Click"/>
+
+
+        <Line X1="220" Y1="0" X2="220" Y2="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" Stroke="Black" StrokeThickness="2" />
+        <ItemsControl ItemsSource="{Binding StudentList}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Name}" />
+                        <TextBlock Text="{Binding Age}" Grid.Column="1" />
+                        <Button Content="Редагувати" Command="{Binding EditStudentCommand}" CommandParameter="{Binding}" Grid.Column="2" />
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <!-- Пошук -->
+        <TextBox x:Name="searchTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="510" Height="20" Margin="240,30,0,0" TextChanged="SearchTextBox_TextChanged" />
+        
+        <DataGrid x:Name="studentsDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="510" Height="320" Margin="240,60,0,0">
+            <DataGrid.Columns>
+                <!-- Ім'я -->
+                <DataGridTextColumn Header="Ім'я" Binding="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" Width="75"/>
+
+                <!-- Прізвище -->
+                <DataGridTextColumn Header="Прізвище" Binding="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Width="75"/>
+
+                <!-- Клас -->
+                <DataGridTextColumn Header="Клас" Binding="{Binding ClassGroup.ClassGroupName, UpdateSourceTrigger=PropertyChanged}" Width="40"/>
+
+                <!-- Пошта -->
+                <DataGridTextColumn Header="Пошта" Binding="{Binding Email, UpdateSourceTrigger=PropertyChanged}" Width="150"/>
+
+                <!-- Логін -->
+                <DataGridTextColumn Header="Логін" Binding="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Width="75"/>
+
+                <!-- Видалити -->
+                <DataGridTemplateColumn Header="" Width="75">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Видалити" CommandParameter="{Binding UserId}" Click="DeleteStudent_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Додати студента" HorizontalAlignment="Right" VerticalAlignment="Top" Width="150" Height="25" Margin="200,385,50,0" Click="AddStudent_Click"/>  
+        <Button Content="Зберегти зміни" Click="SaveChanges_Click" Margin="240,385,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="25"/>
+        
+        
+        
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Вийти" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Вид">
+                <MenuItem Header="Повноекранний режим" Click="Fullscreen_Click"/>
+            </MenuItem>
+            <MenuItem Header="Допомога">
+                <MenuItem Header="Технічна підтримка" Click="TechSupport_Click"/>
+            </MenuItem>
+            <MenuItem Header="Закрити" Click="Close_Click"/>
+        </Menu>
+    </Grid>
+</Window>

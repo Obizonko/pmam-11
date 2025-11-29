@@ -1,0 +1,42 @@
+﻿<Window x:Class="UI.AdminPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="Edu Journal" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="teachersCountTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 30" Text="Кількість вчителів:" />
+        <Button Content="Вчителі" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,50,0,0" Click="EditTeachers_Click"/>
+
+        <TextBlock x:Name="studentsCountTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Text="Кількість учнів:"/>
+        <Button Content="Учні" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,111,0,0" Click="EditStudents_Click"/>
+
+        <Button Content="Розклад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,172,0,0" Click="ViewSchedule_Click"/>
+
+        <Button Content="Загальна статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,233,0,0" Click="GeneralStatistics_Click"/>
+
+        <Button Content="Вибіркова статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,294,0,0" Click="SelectiveStatistics_Click"/>
+
+        <Button Content="Порівняльна статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="40" Margin="10,355,0,0" Click="ComparativeStatistics_Click"/>
+
+
+        <Line X1="220" Y1="0" X2="220" Y2="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" Stroke="Black" StrokeThickness="2" />
+
+        
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Вийти" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Вид">
+                <MenuItem Header="Повноекранний режим" Click="Fullscreen_Click"/>
+            </MenuItem>
+            <MenuItem Header="Допомога">
+                <MenuItem Header="Технічна підтримка" Click="TechSupport_Click"/>
+            </MenuItem>
+            <MenuItem Header="Закрити" Click="Close_Click"/>
+        </Menu>
+
+    </Grid>
+</Window>

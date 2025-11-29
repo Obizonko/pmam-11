@@ -1,0 +1,48 @@
+CREATE TABLE Roles (
+    role_id SERIAL PRIMARY KEY,
+    role_name VARCHAR(255) NOT NULL
+);
+CREATE TABLE ClassGroups (
+    class_group_id SERIAL PRIMARY KEY,
+    class_group_name VARCHAR(50) NOT NULL
+);
+CREATE TABLE Users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password TEXT NOT NULL, 
+    email VARCHAR(255) UNIQUE NOT NULL,
+    role_id INTEGER REFERENCES Roles(role_id),
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    class_group_id INTEGER REFERENCES ClassGroups(class_group_id) NULL,
+    date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE Subjects (
+    subject_id SERIAL PRIMARY KEY,
+    subject_name VARCHAR(255) NOT NULL
+);
+CREATE TABLE TeacherSubjects (
+    teacher_subject_id SERIAL PRIMARY KEY,
+    teacher_id INTEGER REFERENCES Users(user_id),
+    subject_id INTEGER REFERENCES Subjects(subject_id),
+    UNIQUE(teacher_id, subject_id)
+);
+CREATE TABLE Schedule (
+    schedule_id SERIAL PRIMARY KEY,
+    subject_id INTEGER REFERENCES Subjects(subject_id),
+    class_group_id INTEGER REFERENCES ClassGroups(class_group_id),
+    teacher_id INTEGER REFERENCES Users(user_id),
+    day_of_week VARCHAR(255) NOT NULL,
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL
+);
+CREATE TABLE StudentPerformance (
+    attendance_id SERIAL PRIMARY KEY,
+    student_id INTEGER REFERENCES Users(user_id),
+    subject_id INTEGER REFERENCES Subjects(subject_id),
+    schedule_id INTEGER REFERENCES Schedule(schedule_id),
+    date DATE NOT NULL,
+    status VARCHAR(255) NOT NULL,
+    grade INTEGER NULL
+);
+

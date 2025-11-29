@@ -1,0 +1,72 @@
+﻿<Window x:Class="UI.Teachermainpagecopy1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="Teachermainpagecopy1" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="76" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,10,10,0" Height="20">
+            <ComboBox x:Name="dayOfWeekComboBox" Width="208" Height="20">
+            <ComboBoxItem Content="Понеділок" />
+            <ComboBoxItem Content="Вівторок" />
+            <ComboBoxItem Content="Середа" />
+            <ComboBoxItem Content="Четвер" />
+            <ComboBoxItem Content="П'ятниця" />
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,10,0" Height="20">
+            <ComboBox x:Name="classComboBox" Width="58" RenderTransformOrigin="0.485,-0.204">
+            <ComboBoxItem Content="1-А" />
+            <ComboBoxItem Content="1-Б" />
+            <ComboBoxItem Content="2-А" />
+            <ComboBoxItem Content="2-Б" />
+            <ComboBoxItem Content="3-А" />
+            <ComboBoxItem Content="3-Б" />
+            <ComboBoxItem Content="4-А" />
+            <ComboBoxItem Content="4-Б" />
+            <ComboBoxItem Content="5-А" />
+            <ComboBoxItem Content="5-Б" />
+            <ComboBoxItem Content="6-А" />
+            <ComboBoxItem Content="6-Б" />
+            <ComboBoxItem Content="7-А" />
+            <ComboBoxItem Content="7-Б" />
+            <ComboBoxItem Content="8-А" />
+            <ComboBoxItem Content="8-Б" />
+            <ComboBoxItem Content="9-А" />
+            <ComboBoxItem Content="9-Б" />
+            <ComboBoxItem Content="10-А" />
+            <ComboBoxItem Content="10-Б" />
+            <ComboBoxItem Content="11-А" />
+            <ComboBoxItem Content="11-Б" />
+            </ComboBox>
+            <ComboBox x:Name="subjectComboBox" Width="150">
+                <!-- Предмети -->
+                <ComboBoxItem />
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Список днів, коли уроки -->
+        <ListView Name="lessonDaysListView" Margin="234,10,10,10">
+            <!-- Вкладки та колонки списку -->
+        </ListView>
+
+        <!-- Список учнів -->
+        <ListView Name="studentsListView" Grid.Row="2" Margin="0,0,571,0">
+            <!-- Вкладки та колонки списку -->
+        </ListView>
+
+        <!-- Таблиця з журналом -->
+        <DataGrid Name="journalDataGrid" Grid.Row="2" Margin="234,0,10,0" AutoGenerateColumns="True">
+            <!-- Колонки таблиці -->
+        </DataGrid>
+
+    </Grid>
+</Window>

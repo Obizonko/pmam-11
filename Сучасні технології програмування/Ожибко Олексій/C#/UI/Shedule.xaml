@@ -1,0 +1,101 @@
+﻿<Window x:Class="UI.Shedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Розклад уроків" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <ComboBox x:Name="comboBoxTeachers"
+                  Grid.Row="0"
+                  Margin="20"
+                  HorizontalAlignment="Center"
+                  Height="30"
+                  Width="200"
+                  DisplayMemberPath="FullName" 
+                  SelectedValuePath="UserId"
+                  SelectionChanged="ComboBoxTeachers_SelectionChanged" />
+        
+        <TabControl x:Name="tabControlDaysOfWeek" Grid.Row="1" Margin="10">
+            <TabItem Header="Понеділок">
+                <DataGrid x:Name="dataGridMonday" AutoGenerateColumns="False" CanUserAddRows="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Предмет" Binding="{Binding Subject.SubjectName, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час початку" Binding="{Binding StartTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час закінчення" Binding="{Binding EndTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Клас" Binding="{Binding ClassGroup.ClassGroupName, Mode=TwoWay}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Вівторок">
+                <DataGrid x:Name="dataGridTuesday" AutoGenerateColumns="False" CanUserAddRows="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Предмет" Binding="{Binding Subject.SubjectName, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час початку" Binding="{Binding StartTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час закінчення" Binding="{Binding EndTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Клас" Binding="{Binding ClassGroup.ClassGroupName, Mode=TwoWay}" />
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Середа">
+                <DataGrid x:Name="dataGridWednesday" AutoGenerateColumns="False" CanUserAddRows="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Предмет" Binding="{Binding Subject.SubjectName, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час початку" Binding="{Binding StartTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час закінчення" Binding="{Binding EndTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Клас" Binding="{Binding ClassGroup.ClassGroupName, Mode=TwoWay}" />
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Четвер">
+                <DataGrid x:Name="dataGridThursday" AutoGenerateColumns="False" CanUserAddRows="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Предмет" Binding="{Binding Subject.SubjectName, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час початку" Binding="{Binding StartTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час закінчення" Binding="{Binding EndTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Клас" Binding="{Binding ClassGroup.ClassGroupName, Mode=TwoWay}" />
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="П'ятниця">
+                <DataGrid x:Name="dataGridFriday" AutoGenerateColumns="False" CanUserAddRows="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Предмет" Binding="{Binding Subject.SubjectName, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час початку" Binding="{Binding StartTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Час закінчення" Binding="{Binding EndTime, Mode=TwoWay}" />
+                        <DataGridTextColumn Header="Клас" Binding="{Binding ClassGroup.ClassGroupName, Mode=TwoWay}" />
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+        <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button Content="Зберегти зміни" Width="120" Height="30" Click="SaveChanges_Click" Margin="5"/>
+            <Button Content="Видалити рядок" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    Width="120" Height="30" Margin="5" Click="DeleteRow_Click"/>
+            
+        </StackPanel>
+        <Image Source="icons/back.png" Width="35" Height="40" HorizontalAlignment="Left" Margin="0,25,3,0" MouseUp="BackButtonClick"/>
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Вийти" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Вид">
+                <MenuItem Header="Повноекранний режим" Click="Fullscreen_Click"/>
+            </MenuItem>
+            <MenuItem Header="Допомога">
+                <MenuItem Header="Технічна підтримка" Click="TechSupport_Click"/>
+            </MenuItem>
+            <MenuItem Header="Закрити" Click="Close_Click"/>
+        </Menu>
+    </Grid>
+</Window>
