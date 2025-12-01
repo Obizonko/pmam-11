@@ -1,5 +1,3 @@
-local fromdb = {username = 'YOUR MOM IS GAY :)'}
-
 local _DEBUG = true
 
 local assert, defer, error, getfenv, setfenv, getmetatable, setmetatable, ipairs,
@@ -3554,4 +3552,5 @@ client.set_event_callback('setup_command', function(cmd)
 	fast_ladder.handle(cmd)
 	conditional_antiaims.handle(cmd)
 	antiaim_on_use.handle(cmd)
+
 end)
