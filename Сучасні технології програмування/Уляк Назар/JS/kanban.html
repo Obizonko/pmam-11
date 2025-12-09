@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Vanilla JS Kanban Board</title>
+    <style>
+        :root {
+            --bg-color: #f4f5f7;
+            --card-bg: #ffffff;
+            --column-bg: #ebecf0;
+            --text-color: #172b4d;
+            --accent: #0079bf;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--accent);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            padding: 15px;
+            background: rgba(0,0,0,0.15);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .board {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px;
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        /* Стилі колонок */
+        .column {
+            background-color: var(--column-bg);
+            min-width: 300px;
+            max-width: 300px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            max-height: 100%;
+        }
+
+        .column-header {
+            padding: 10px 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .task-list {
+            padding: 0 10px 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+            min-height: 50px; /* Для можливості дропу в пусту колонку */
+        }
+
+        /* Стилі карток завдань */
+        .task-card {
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            cursor: grab;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .task-card:hover {
+            background-color: #fafbfc;
+        }
+        
+        .task-card:active {
+            cursor: grabbing;
+        }
+
+        /* Стилі для Drag & Drop */
+        .dragging {
+            opacity: 0.5;
+            transform: rotate(2deg);
+        }
+
+        .drag-over {
+            background-color: #dfe1e6;
+            border: 2px dashed #0079bf;
+        }
+
+        /* Кнопки */
+        .add-btn {
+            background: none;
+            border: none;
+            color: #5e6c84;
+            padding: 10px;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+        }
+        .add-btn:hover { background-color: rgba(0,0,0,0.05); }
+
+        .delete-btn {
+            float: right;
+            color: #eb5a46;
+            cursor: pointer;
+            font-size: 12px;
+            visibility: hidden;
+        }
+
+        .task-card:hover .delete-btn { visibility: visible; }
+
+        .reset-btn {
+            background: #eb5a46;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>JS Kanban</h2>
+    <button class="reset-btn" onclick="kanban.resetBoard()">Очистити дошку</button>
+</header>
+
+<div class="board" id="board">
+    </div>
+
+<script>
+    // --- MODEL: Управління даними ---
+    class DataStore {
+        constructor() {
+            this.STORAGE_KEY = 'kanban_data';
+            // Початковий стан, якщо сховище пусте
+            this.defaultData = {
+                columns: [
+                    { id: 'col-1', title: 'To Do', taskIds: [] },
+                    { id: 'col-2', title: 'In Progress', taskIds: [] },
+                    { id: 'col-3', title: 'Done', taskIds: [] }
+                ],
+                tasks: {} 
+            };
+        }
+
+        load() {
+            const data = localStorage.getItem(this.STORAGE_KEY);
+            return data ? JSON.parse(data) : JSON.parse(JSON.stringify(this.defaultData));
+        }
+
+        save(data) {
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
+        }
+
+        reset() {
+            localStorage.removeItem(this.STORAGE_KEY);
+            location.reload();
+        }
+    }
+
+    // --- CONTROLLER & VIEW: Логіка дошки ---
+    class KanbanBoard {
+        constructor(rootElement) {
+            this.root = rootElement;
+            this.store = new DataStore();
+            this.data = this.store.load();
+            this.draggedItem = null;
+            this.sourceColumnId = null;
+
+            this.render();
+            this.attachDragAndDropEvents();
+        }
+
+        // Рендеринг (генерація HTML на основі даних)
+        render() {
+            this.root.innerHTML = '';
+            
+            this.data.columns.forEach(column => {
+                // Створення HTML колонки
+                const colDiv = document.createElement('div');
+                colDiv.className = 'column';
+                colDiv.dataset.colId = column.id;
+
+                const header = document.createElement('div');
+                header.className = 'column-header';
+                header.innerHTML = `<span>${column.title} <small>(${column.taskIds.length})</small></span>`;
+
+                const taskList = document.createElement('div');
+                taskList.className = 'task-list';
+                taskList.dataset.colId = column.id; // Важливо для дропу
+
+                // Рендеринг завдань всередині колонки
+                column.taskIds.forEach(taskId => {
+                    const task = this.data.tasks[taskId];
+                    if (task) {
+                        const taskCard = this.createTaskElement(task);
+                        taskList.appendChild(taskCard);
+                    }
+                });
+
+                // Кнопка додавання
+                const addBtn = document.createElement('button');
+                addBtn.className = 'add-btn';
+                addBtn.innerText = '+ Додати картку';
+                addBtn.onclick = () => this.addNewTask(column.id);
+
+                colDiv.appendChild(header);
+                colDiv.appendChild(taskList);
+                colDiv.appendChild(addBtn);
+                this.root.appendChild(colDiv);
+            });
+        }
+
+        createTaskElement(task) {
+            const div = document.createElement('div');
+            div.className = 'task-card';
+            div.draggable = true;
+            div.dataset.taskId = task.id;
+            div.innerHTML = `
+                ${task.content}
+                <span class="delete-btn" onclick="event.stopPropagation(); kanban.deleteTask('${task.id}')">✕</span>
+            `;
+            return div;
+        }
+
+        addNewTask(columnId) {
+            const content = prompt("Введіть назву завдання:");
+            if (!content) return;
+
+            const newTaskId = 'task-' + Date.now();
+            
+            // Оновлення даних (Model)
+            this.data.tasks[newTaskId] = { id: newTaskId, content: content };
+            const column = this.data.columns.find(c => c.id === columnId);
+            column.taskIds.push(newTaskId);
+
+            this.store.save(this.data);
+            this.render(); // Перемальовуємо все (React стиль)
+        }
+
+        deleteTask(taskId) {
+            if(!confirm("Видалити завдання?")) return;
+
+            // Видалення самого завдання
+            delete this.data.tasks[taskId];
+
+            // Видалення ID завдання з усіх колонок
+            this.data.columns.forEach(col => {
+                col.taskIds = col.taskIds.filter(id => id !== taskId);
+            });
+
+            this.store.save(this.data);
+            this.render();
+        }
+
+        resetBoard() {
+            if(confirm("Це зітре всі дані. Продовжити?")) {
+                this.store.reset();
+            }
+        }
+
+        // --- Drag and Drop Logic ---
+        attachDragAndDropEvents() {
+            // Event Delegation: слухаємо події на всій дошці
+            
+            this.root.addEventListener('dragstart', (e) => {
+                if (e.target.classList.contains('task-card')) {
+                    this.draggedItem = e.target;
+                    this.sourceColumnId = e.target.closest('.column').dataset.colId;
+                    e.target.classList.add('dragging');
+                    // Ефект переміщення даних
+                    e.dataTransfer.effectAllowed = 'move';
+                }
+            });
+
+            this.root.addEventListener('dragend', (e) => {
+                if (e.target.classList.contains('task-card')) {
+                    e.target.classList.remove('dragging');
+                    this.draggedItem = null;
+                    document.querySelectorAll('.task-list').forEach(el => el.classList.remove('drag-over'));
+                }
+            });
+
+            this.root.addEventListener('dragover', (e) => {
+                e.preventDefault(); // Дозволяє "дроп"
+                const taskList = e.target.closest('.task-list');
+                if (taskList) {
+                    taskList.classList.add('drag-over');
+                }
+            });
+
+            this.root.addEventListener('dragleave', (e) => {
+                const taskList = e.target.closest('.task-list');
+                if (taskList) {
+                    taskList.classList.remove('drag-over');
+                }
+            });
+
+            this.root.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const dropTarget = e.target.closest('.task-list');
+                
+                if (dropTarget && this.draggedItem) {
+                    const targetColId = dropTarget.dataset.colId;
+                    const taskId = this.draggedItem.dataset.taskId;
+
+                    if (this.sourceColumnId !== targetColId || dropTarget !== this.draggedItem.parentNode) {
+                        this.moveTask(taskId, this.sourceColumnId, targetColId);
+                    }
+                }
+            });
+        }
+
+        moveTask(taskId, fromColId, toColId) {
+            // 1. Видаляємо зі старої колонки
+            const fromCol = this.data.columns.find(c => c.id === fromColId);
+            fromCol.taskIds = fromCol.taskIds.filter(id => id !== taskId);
+
+            // 2. Додаємо в нову
+            const toCol = this.data.columns.find(c => c.id === toColId);
+            toCol.taskIds.push(taskId);
+
+            // 3. Зберігаємо і малюємо
+            this.store.save(this.data);
+            this.render();
+        }
+    }
+
+    // Ініціалізація
+    const kanban = new KanbanBoard(document.getElementById('board'));
+</script>
+
+</body>
+</html>
